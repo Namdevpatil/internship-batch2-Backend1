@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.demoBeanCollaborations.Employee">  
+		
+		<constructor-arg name="employeeId">
+			<value>3021</value>		
+		</constructor-arg>
+		
+		<constructor-arg name="employeeName">
+			<value>Dinesh Reddy</value>
+		</constructor-arg>
+		
+		<constructor-arg name="employeeRole">
+			<value>Software Engineer</value>
+		</constructor-arg>
+		
+		<constructor-arg name="employeeSalary">
+			<value>89776.67</value>
+		</constructor-arg>
+		
+		<constructor-arg name="department" ref="department">
+			
+		</constructor-arg>
+		
+	</bean>
+	
+	<bean id="department" class="com.demoBeanCollaborations.Department">  
+		
+		<constructor-arg name="departmentId">
+			<value>2200</value>		
+		</constructor-arg>
+		
+		<constructor-arg name="departmentName">
+			<value>Development</value>
+		</constructor-arg>
+				
+	</bean>
+
+	
+
+</beans>
